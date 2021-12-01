@@ -1,0 +1,20 @@
+body {
+background-image: url(https://www.abercrombiekent.co.uk/-/media/abercrombieandkent/images/itineraries/destinations/europe/italy/florence-city-break/italy-florence-city-break.jpg?w=1920&h=940);
+text-align: center; 
+}
+
+header {
+  background-color: rgba(180, 128, 16, 0.897);
+}
+
+#bio {
+background-color: rgba(226, 219, 204, 0.733);
+font-family: 'Times New Roman', Times, serif;
+font-size: 32px;
+width: 1200px;
+margin: auto;
+color: black;
+padding-left: .5%;
+padding-right: .5%;
+}
+
