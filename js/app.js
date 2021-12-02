@@ -104,29 +104,36 @@ function questionSix(){
 }
 questionSix();
 
-let question7Attempts = 6;
-let favFoodsGuessed = 0;
-const favFoods = ['pizza', 'tacos', 'pasta', 'ramen', 'burgers', 'steak']
-const favFoodsNoRepeats = favFoods.slice();
-while (question7Attempts > 0) {
-  let correct = false;
-  let question7 = prompt("What's one of my favorite foods?")
-  console.log(favFoodsNoRepeats)
-  for (let i = 0; i < favFoodsNoRepeats.length; i++) {
-    let currEl = favFoodsNoRepeats[i];
-    if (question7.toLowerCase() === currEl) {
-      alert(`Nice job ${userName}, how'd you know?`)
-      favFoodsGuessed++;
-      correct = true;
-      favFoodsNoRepeats.splice(i, 1);
-      break;
-    }
-  }
-  if (correct === false) {
-    alert('Nope!');
-  }
-  question7Attempts--;
-}
 
-alert(`You guessed ${favFoodsGuessed} of my favorite foods correctly, if you're wondering what they are voila: ${favFoods}`)
+let favFoodsGuessed = 0;
+
+function questionSeven(){
+  let question7Attempts = 6;
+  
+  const favFoods = ['pizza', 'tacos', 'pasta', 'ramen', 'burgers', 'steak']
+  const favFoodsNoRepeats = favFoods.slice();
+  while (question7Attempts > 0) {
+    let correct = false;
+    let question7 = prompt("What's one of my favorite foods?")
+    console.log(favFoodsNoRepeats)
+    for (let i = 0; i < favFoodsNoRepeats.length; i++) {
+      let currEl = favFoodsNoRepeats[i];
+      if (question7.toLowerCase() === currEl) {
+        alert(`Nice job ${userName}, how'd you know?`)
+        favFoodsGuessed++;
+        correct = true;
+        favFoodsNoRepeats.splice(i, 1);
+        break;
+      }
+    }
+    if (correct === false) {
+      alert('Nope!');
+    }
+    question7Attempts--;
+  }
+  
+  alert(`You guessed ${favFoodsGuessed} of my favorite foods correctly, if you're wondering what they are voila: ${favFoods}`)
+}
+questionSeven();
+
 alert(`Thanks for learning about me ${userName} and taking the quiz! You got ${counter}/6 questions right and guessed ${favFoodsGuessed}/6 of my favorite foods.`)
