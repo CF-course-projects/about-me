@@ -1,14 +1,23 @@
 body {
-background-image: url(https://www.abercrombiekent.co.uk/-/media/abercrombieandkent/images/itineraries/destinations/europe/italy/florence-city-break/italy-florence-city-break.jpg?w=1920&h=940);
 text-align: center; 
+background: url(https://www.abercrombiekent.co.uk/-/media/abercrombieandkent/images/itineraries/destinations/europe/italy/florence-city-break/italy-florence-city-break.jpg?w=1920&h=940) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 header {
   background-color: rgba(180, 128, 16, 0.897);
+  height: 1.5em;
+  font-size: 42px;
+  padding-top: 1%;
 }
-
+main {
+  background-color: rgba(226, 219, 204, 0.733);
+  width: 100%;
+}
 #bio {
-background-color: rgba(226, 219, 204, 0.733);
 font-family: 'Times New Roman', Times, serif;
 font-size: 32px;
 width: 1200px;
@@ -16,5 +25,20 @@ margin: auto;
 color: black;
 padding-left: .5%;
 padding-right: .5%;
+}
+footer {
+  margin-top: 22.66%;
+  background-color: rgba(226, 219, 204, 0.733);
+  font-size: 24px;
+}
+#places > ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+  /* width: 80%;
+  margin: auto; */
+}
+#funFacts {
+  list-style-position: inside;
+  list-style-type:disc;
 }
 
