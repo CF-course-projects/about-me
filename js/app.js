@@ -27,17 +27,21 @@ if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n') {
   //console.log('wrong')
 }
 }
-questionTwo()
+questionTwo();
 
 
-let question3 = prompt(`I speak five langauges`)
-if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y') {
-  //console.log(`right`)
-  alert(`Correct ${userName}, I speak English, Italian, Spanish, French and Thai.`);
-  counter++;
-} else {
-  alert(`Wrong, I speak five languages to varying proficiencies.`);
+function questionThree(){
+  let question3 = prompt(`I speak five langauges`)
+  if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y') {
+    //console.log(`right`)
+    alert(`Correct ${userName}, I speak English, Italian, Spanish, French and Thai.`);
+    counter++;
+  } else {
+    alert(`Wrong, I speak five languages to varying proficiencies.`);
+  }
 }
+questionThree();
+
 
 let question4 = prompt("I went to college for something non-tech related")
 if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y') {
