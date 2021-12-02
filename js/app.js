@@ -1,8 +1,8 @@
 'use strict';
 let userName = prompt("Hi reader! What should I call you?");
 alert(`Thanks for taking the time to get to know me ${userName}, we'll play a quiz game and see how well you know me!`)
-
 let counter = 0;
+
 function questionOne() {
   let question1 = prompt("I grew up in New York City.")
   if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y') {
@@ -70,37 +70,40 @@ function questionFive(){
 }
 questionFive();
 
+function questionSix(){
+  let question6Right = false;
+  let question6Attempts = 4;
+  let min = Math.ceil(1);
+  let max = Math.floor(10);
+  let question6Answer = Math.floor(Math.random() * (max - min) + min);
+  console.log(`question6Num = ${question6Answer}`)
+  let question6Input = prompt("Now guess a number from 1-10");
+  for (let i = 0; i < 3; i++) {
+    if (question6Input == question6Answer) {
+      alert(`You got it ${userName}`);
+      counter++;
+      question6Right = true;
+      question6Attempts--;
+      break;
+    }
+    else if (question6Input < question6Answer) {
+      question6Input = prompt(`Too low ${userName}!`);
+      question6Attempts--;
+    }
+    else if (question6Input > question6Answer) {
+      question6Input = prompt(`Too high ${userName}!`);
+      question6Attempts--;
+    }
+  }
+  if (question6Right === true) {
+    alert(`Congrats ${userName}! You got it right with ${question6Attempts} guesses left!`)
+  } else {
+    alert(`Tough luck ${userName}, maybe next time!`)
+  }
+  alert('Now guess what my favorite foods are!');
+}
+questionSix();
 
-let question6Right = false;
-let question6Attempts = 4;
-let min = Math.ceil(1);
-let max = Math.floor(10);
-let question6Answer = Math.floor(Math.random() * (max - min) + min);
-console.log(`question6Num = ${question6Answer}`)
-let question6Input = prompt("Now guess a number from 1-10");
-for (let i = 0; i < 3; i++) {
-  if (question6Input == question6Answer) {
-    alert(`You got it ${userName}`);
-    counter++;
-    question6Right = true;
-    question6Attempts--;
-    break;
-  }
-  else if (question6Input < question6Answer) {
-    question6Input = prompt(`Too low ${userName}!`);
-    question6Attempts--;
-  }
-  else if (question6Input > question6Answer) {
-    question6Input = prompt(`Too high ${userName}!`);
-    question6Attempts--;
-  }
-}
-if (question6Right === true) {
-  alert(`Congrats ${userName}! You got it right with ${question6Attempts} guesses left!`)
-} else {
-  alert(`Tough luck ${userName}, maybe next time!`)
-}
-alert('Now guess what my favorite foods are!');
 let question7Attempts = 6;
 let favFoodsGuessed = 0;
 const favFoods = ['pizza', 'tacos', 'pasta', 'ramen', 'burgers', 'steak']
