@@ -3,15 +3,18 @@ let userName = prompt("Hi reader! What should I call you?");
 alert(`Thanks for taking the time to get to know me ${userName}, we'll play a quiz game and see how well you know me!`)
 
 let counter = 0;
-let question1 = prompt("I grew up in New York City.")
-if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y') {
-  //console.log(`right`)
-  alert(`That's right ${userName}!`);
-  counter++;
-} else {
-  alert("Nope, I grew up in New York City.");
-  //console.log('wrong')
+function questionOne() {
+  let question1 = prompt("I grew up in New York City.")
+  if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y') {
+    //console.log(`right`)
+    alert(`That's right ${userName}!`);
+    counter++;
+  } else {
+    alert("Nope, I grew up in New York City.");
+    //console.log('wrong')
+  }
 }
+questionOne();
 
 let question2 = prompt("I've lived on two different continents.")
 if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n') {
