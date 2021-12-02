@@ -16,7 +16,8 @@ function questionOne() {
 }
 questionOne();
 
-let question2 = prompt("I've lived on two different continents.")
+function questionTwo(){
+  let question2 = prompt("I've lived on two different continents.")
 if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n') {
   //console.log(`right`)
   alert(`False, I've lived on three continents`);
@@ -25,6 +26,9 @@ if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n') {
   alert("Not quite right, I've lived on three continents!");
   //console.log('wrong')
 }
+}
+questionTwo()
+
 
 let question3 = prompt(`I speak five langauges`)
 if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y') {
