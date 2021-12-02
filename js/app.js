@@ -43,15 +43,18 @@ function questionThree(){
 questionThree();
 
 
-let question4 = prompt("I went to college for something non-tech related")
-if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y') {
-  //console.log(`right`)
-  alert(`Correct, I studied corporate communication in college.`);
-  counter++;
-} else {
-  alert(`Incorrect, I studied corporate communication in college.`);
-  //console.log('wrong')
+function questionFour(){
+  let question4 = prompt("I went to college for something non-tech related")
+  if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y') {
+    //console.log(`right`)
+    alert(`Correct, I studied corporate communication in college.`);
+    counter++;
+  } else {
+    alert(`Incorrect, I studied corporate communication in college.`);
+    //console.log('wrong')
+  }
 }
+questionFour();
 
 let question5 = prompt("I currently live in Seattle")
 if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n') {
