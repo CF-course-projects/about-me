@@ -56,15 +56,21 @@ function questionFour(){
 }
 questionFour();
 
-let question5 = prompt("I currently live in Seattle")
-if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n') {
-  //console.log(`right`)
-  alert("You got it! I currently live in New York City.")
-  counter++;
-} else {
-  alert("Oops! I currently live in New York City.");
-  //console.log('wrong')
+
+function questionFive(){
+  let question5 = prompt("I currently live in Seattle")
+  if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n') {
+    //console.log(`right`)
+    alert("You got it! I currently live in New York City.")
+    counter++;
+  } else {
+    alert("Oops! I currently live in New York City.");
+    //console.log('wrong')
+  }
 }
+questionFive();
+
+
 let question6Right = false;
 let question6Attempts = 4;
 let min = Math.ceil(1);
